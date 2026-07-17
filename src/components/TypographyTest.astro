@@ -1,85 +1,115 @@
 ---
-
+import LogoHorizontal from "./svg/LogoHorizontal.astro";
+import LogoVertical from "./svg/LogoVertical.astro";
+import LogoIcon from "./svg/LogoIcon.astro";
 ---
 
 <div class="mx-auto max-w-4xl space-y-16 px-4 py-12">
   <section class="space-y-4">
-    <h1 class="text-h1">Primary Heading (H1)</h1>
+    <p class="text-eyebrow text-accent">Brand &amp; Typography System</p>
+    <h1 class="text-h1">
+      Writing that carries the Confederation
+      <LogoIcon class="inline-block h-[0.9em] w-auto align-[-0.12em]" /> mark
+    </h1>
+    <p class="text-lead">
+      This page pairs our predefined type styles with the Confederation College
+      logos so you can see how real content behaves. Every heading, paragraph,
+      and accent below uses the same utility classes you&rsquo;ll reach for when
+      building pages &mdash; nothing here is bespoke.
+    </p>
     <p class="text-p">
-      This paragraph follows an H1 heading. It demonstrates the visual
-      relationship between your largest heading and body text. A good
-      typographic hierarchy helps guide readers through your content effectively
-      while maintaining readability across different screen sizes.
+      The mark above is the <span class="font-mono text-sm">&lt;LogoIcon /&gt;</span
+      > component set at the current text size. Because it inherits
+      <span class="font-mono text-sm">currentColor</span>, it flows inside a
+      sentence like any other glyph, which makes it handy for inline callouts and
+      lead-ins without breaking the reading rhythm.
     </p>
   </section>
 
   <section class="space-y-4">
-    <h2 class="text-h2">Secondary Heading (H2)</h2>
+    <h2 class="text-h2">Section headings and the horizontal lockup (H2)</h2>
     <p class="text-p">
-      H2 headings are ideal for major section breaks within your content. This
-      paragraph shows how body text pairs with your second-level heading. Notice
-      how the size difference creates visual hierarchy while remaining
-      proportional and balanced.
+      Use <span class="font-mono text-sm">text-h2</span> for major section
+      breaks. When a section needs to stand for the institution as a whole, the
+      horizontal lockup sits naturally at the top of it &mdash; the wordmark&rsquo;s
+      weight balances against the heading below.
+    </p>
+    <LogoHorizontal class="h-12 w-auto" />
+  </section>
+
+  <section class="space-y-4">
+    <h3 class="text-h3">Pairing type with the vertical lockup (H3)</h3>
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-start">
+      <LogoVertical class="h-28 w-auto shrink-0" />
+      <p class="text-p">
+        <span class="font-mono text-sm">text-h3</span> suits subsections and
+        important points. The vertical lockup earns its place beside body copy
+        &mdash; in a sidebar, a card, or a signature block &mdash; where its
+        stacked proportions read well in a narrow column. Notice how the heading
+        stays dominant while the mark supports rather than competes with it.
+      </p>
+    </div>
+  </section>
+
+  <section class="space-y-4">
+    <h4 class="text-h4">Fourth level heading (H4)</h4>
+    <p class="text-p">
+      <span class="font-mono text-sm">text-h4</span> organizes more detailed
+      information. At this level the heading still stands apart from body text
+      while beginning to approach its size, so it works for the smaller
+      structural blocks within a longer article.
     </p>
   </section>
 
   <section class="space-y-4">
-    <h3 class="text-h3">Tertiary Heading (H3)</h3>
+    <h5 class="text-h5">Fifth level heading (H5)</h5>
     <p class="text-p">
-      H3 headings work well for subsections and important points. This
-      accompanying paragraph demonstrates how your tertiary headings relate to
-      standard body text. The contrast should be noticeable but not as dramatic
-      as with higher-level headings.
+      <span class="font-mono text-sm">text-h5</span> is typically used for minor
+      sections or callouts. The visual distinction becomes more subtle here,
+      relying on weight as much as size &mdash; a good pairing for labelled
+      groups of links or metadata.
     </p>
   </section>
 
   <section class="space-y-4">
-    <h4 class="text-h4">Fourth Level Heading (H4)</h4>
+    <h6 class="text-h6">Sixth level heading (H6)</h6>
     <p class="text-p">
-      H4 headings provide further content organization for more detailed
-      information. This paragraph shows the relationship between your
-      fourth-level heading and normal paragraph text. At this level, the heading
-      should still stand out while beginning to approach the text size.
+      <span class="font-mono text-sm">text-h6</span> is the smallest heading,
+      useful for fine detail or specialized content. At this size the difference
+      from paragraph text is often just font weight, so reserve it for genuinely
+      low-level structure.
     </p>
   </section>
 
   <section class="space-y-4">
-    <h5 class="text-h5">Fifth Level Heading (H5)</h5>
-    <p class="text-p">
-      H5 headings are typically used for minor sections or callouts. This
-      paragraph demonstrates how your fifth-level heading pairs with standard
-      body text. The visual distinction becomes more subtle at this level, often
-      relying on weight differences rather than dramatic size changes.
-    </p>
-  </section>
-
-  <section class="space-y-4">
-    <h6 class="text-h6">Sixth Level Heading (H6)</h6>
-    <p class="text-p">
-      H6 headings represent your smallest heading size, useful for small details
-      or specialized content. This paragraph shows how your smallest heading
-      relates to normal paragraph text. At this level, the distinction is often
-      minimal, with perhaps only font weight differentiating the heading.
-    </p>
-  </section>
-
-  <section class="space-y-4">
-    <p class="text-quote italic">
-      This is an example of a blockquote or featured text using the quote
-      typography style. It should stand out from regular paragraphs while
-      maintaining harmony with the overall typographic system.
+    <figure class="space-y-4">
+      <LogoIcon class="h-10 w-auto text-accent" />
+      <blockquote class="text-quote italic">
+        Good typography is invisible &mdash; it lets the reader forget the type
+        and remember the idea. Our styles and marks exist to serve the message,
+        never to upstage it.
+      </blockquote>
+    </figure>
+    <p class="text-small">
+      The <span class="font-mono text-xs">text-quote</span> style stands out from
+      regular paragraphs while staying in harmony with the system. The mark is a
+      single-color logo &mdash; here it inherits the brand navy through
+      <span class="font-mono text-xs">currentColor</span>, so it always matches
+      the type it sits beside.
     </p>
   </section>
 
   <section class="space-y-4">
     <p class="text-p">
       This is a standard paragraph (<span class="font-mono text-sm">text-p</span
-      >) demonstrating your base text style. It should be highly readable and
-      comfortable for extended reading.
+      >) demonstrating the base text style. It should be highly readable and
+      comfortable for extended reading &mdash; the workhorse for nearly all
+      content on a page.
     </p>
     <p class="text-small">
-      This is small text (<span class="font-mono text-xs">text-small</span>)
-      which might be used for captions, footnotes, or supplementary information.
+      This is small text (<span class="font-mono text-xs">text-small</span>) for
+      captions, footnotes, or supplementary information such as image credits and
+      legal lines.
     </p>
     <button class="text-button rounded bg-accent px-4 py-2 text-white"
       >Button Text Style</button
